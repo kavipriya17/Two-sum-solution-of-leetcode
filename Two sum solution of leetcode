@@ -1,0 +1,33 @@
+public class Solution {
+    public static int [] twoSum(int []nums,int target){
+    ArrayList<Integer>n=new ArrayList<Integer>();
+    for(int i=0;i<nums.length;i++){
+        for(int j=i+1;j<nums.length;j++){
+            if((nums[i]+nums[j])==target)
+            {
+              return new int []{i,j};
+            }
+        }
+    }
+    return new int[]{};
+    }
+   public static void main(String x[]){
+    Scanner sc=new Scanner(System.in);
+    int nums[]=new int [1000],ans[];
+   int input;
+   boolean f=true;
+   int k=0;
+   while(f){
+    input=sc.nextInt();
+    if(input==0)
+      f=false;
+    else{
+    nums[k]=input;
+    k++;
+    }
+   }
+    int target=sc.nextInt();
+    ans=twoSum(nums,target);
+     System.out.print(ans);
+   }
+}
